@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light Composer - Agency Experiment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Üst Kontrol Paneli: Mod Seçimi ve Sıfırlama -->
+  <header class="control-panel">
+    <div class="mode-selector">
+      <button id="mode-individual" class="mode-btn active" type="button">Individual Mode</button>
+      <button id="mode-together" class="mode-btn" type="button">Together Mode</button>
+    </div>
+    <button id="btn-reset" class="reset-btn" type="button">Reset Stage</button>
+  </header>
+
+  <!-- Ana Sahne: 4 Temel Geometrik Şekil -->
+  <main class="stage" aria-label="Light Stage">
+    <div class="shape-container">
+      
+      <!-- A: Sol Mercan Daire -->
+      <div class="shape-wrapper">
+        <svg class="shape-svg" viewBox="0 0 100 100" aria-hidden="true">
+          <circle id="shape-A" cx="50" cy="50" r="40" class="shape-element" />
+        </svg>
+        <span class="shape-label">A · Circle</span>
+      </div>
+
+      <!-- S: Orta Sarı Üçgen -->
+      <div class="shape-wrapper">
+        <svg class="shape-svg" viewBox="0 0 100 100" aria-hidden="true">
+          <polygon id="shape-S" points="50,10 90,90 10,90" class="shape-element" />
+        </svg>
+        <span class="shape-label">S · Triangle</span>
+      </div>
+
+      <!-- D: Sağ Mavi Kare -->
+      <div class="shape-wrapper">
+        <svg class="shape-svg" viewBox="0 0 100 100" aria-hidden="true">
+          <rect id="shape-D" x="10" y="10" width="80" height="80" class="shape-element" />
+        </svg>
+        <span class="shape-label">D · Square</span>
+      </div>
+
+      <!-- F: Üst Beyaz Halka -->
+      <div class="shape-wrapper">
+        <svg class="shape-svg" viewBox="0 0 100 100" aria-hidden="true">
+          <circle id="shape-F" cx="50" cy="50" r="38" class="shape-element ring" />
+        </svg>
+        <span class="shape-label">F · Ring</span>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Dokunmatik / Ekrana Tıklamalı Butonlar -->
+  <footer class="touch-controls" aria-label="Touch Controls">
+    <button id="touch-A" class="touch-btn" data-key="A" type="button">
+      <span class="btn-key">A</span>
+      <span class="btn-shape">Circle</span>
+    </button>
+    <button id="touch-S" class="touch-btn" data-key="S" type="button">
+      <span class="btn-key">S</span>
+      <span class="btn-shape">Triangle</span>
+    </button>
+    <button id="touch-D" class="touch-btn" data-key="D" type="button">
+      <span class="btn-key">D</span>
+      <span class="btn-shape">Square</span>
+    </button>
+    <button id="touch-F" class="touch-btn" data-key="F" type="button">
+      <span class="btn-key">F</span>
+      <span class="btn-shape">Ring</span>
+    </button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
